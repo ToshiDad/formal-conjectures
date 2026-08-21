@@ -169,7 +169,7 @@ namespace WeierstrassCurve
 /-- The elliptic curve over ℚ of rank at least 30 found by user `ranksunbounded` in 2026.
 It has rank exactly 30 assuming the generalized Riemann hypothesis and Birch and Swinnerton-Dyer
 conjecture. -/
-def ranksunbounded30 : WeierstrassCurve ℚ where
+def ranksunbounded30 : Affine ℚ where
   a₁ := 1
   a₂ := 0
   a₃ := 0
@@ -190,12 +190,12 @@ instance : ranksunbounded30.IsElliptic where
 
 /-- The rank of the ranksunbounded curve is at least 30. -/
 @[category research solved, AMS 11 14]
-theorem thirty_le_rank_ranksunbounded30 : 30 ≤ finrank ℤ ranksunbounded30⟮ℚ⟯ := by
+theorem thirty_le_rank_ranksunbounded30 : 30 ≤ finrank ℤ ranksunbounded30.Point := by
   sorry
 
 /-- The rank of the ranksunbounded curve is exactly 30. -/
 @[category research open, AMS 11 14]
-theorem rank_ranksunbounded30 : finrank ℤ ranksunbounded30⟮ℚ⟯ = 30 := by
+theorem rank_ranksunbounded30 : finrank ℤ ranksunbounded30.Point = 30 := by
   sorry
 
 /-- The elliptic curve over ℚ of rank at least 29 found by Elkies and Klagsbrun in 2024.
